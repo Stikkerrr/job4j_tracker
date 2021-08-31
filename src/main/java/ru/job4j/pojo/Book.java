@@ -2,7 +2,7 @@ package ru.job4j.pojo;
 
 public class Book {
     private String name;
-    private int numberOfPages;
+    private int pages;
 
     public String getName() {
         return name;
@@ -12,11 +12,11 @@ public class Book {
         this.name = name;
     }
 
-    public int getNumberOfPages() {
-        return numberOfPages;
+    public int getPages() {
+        return pages;
     }
 
-    public void setNumberOfPages(int numberOfPages) {
-        this.numberOfPages = numberOfPages;
+    public void setPages(int pages) {
+        this.pages = pages;
     }
 }
