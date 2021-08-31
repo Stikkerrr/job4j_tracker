@@ -12,10 +12,10 @@ public class College {
         vlad.setSurname("Иванович");
         vlad.setGroup("Оптотехника");
         vlad.setReceiptDate(LocalDateTime.now());
-        System.out.println(vlad.getName() + "\n"
-                            + vlad.getSurname() + "\n"
-                            + vlad.getFamilyName() + "\n"
-                            + vlad.getGroup() + "\n"
+        System.out.println(vlad.getName() + System.lineSeparator()
+                            + vlad.getSurname() + System.lineSeparator()
+                            + vlad.getFamilyName() + System.lineSeparator()
+                            + vlad.getGroup() + System.lineSeparator()
                             + vlad.getReceiptDate());
     }
 }
