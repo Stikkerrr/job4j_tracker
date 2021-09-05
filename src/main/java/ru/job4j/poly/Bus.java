@@ -1,6 +1,7 @@
 package ru.job4j.poly;
 
 public class Bus implements Transport {
+    private final int price = 45;
 
     @Override
     public void ride() {
@@ -13,7 +14,7 @@ public class Bus implements Transport {
     }
 
     @Override
-    public int refuel(int price) {
-        return price;
+    public int refuel(int fuel) {
+        return price * fuel;
     }
 }
