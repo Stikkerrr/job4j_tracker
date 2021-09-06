@@ -1,9 +1,9 @@
 package ru.job4j.tracker;
 
-public class ShowItemAction implements UserAction {
+public class ShowItemsAction implements UserAction {
     private final Output out;
 
-    public ShowItemAction(Output out) {
+    public ShowItemsAction(Output out) {
         this.out = out;
     }
 
