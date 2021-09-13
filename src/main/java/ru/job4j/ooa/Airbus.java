@@ -1,17 +1,12 @@
 package ru.job4j.ooa;
 
 public final class Airbus extends Aircraft {
-    private int COUNT_ENGINE = 2;
+    private static final int COUNT_ENGINE = 2;
 
     private String name;
 
     public Airbus(String name) {
         this.name = name;
-    }
-
-    public Airbus(String name, int count) {
-        this.name = name;
-        this.COUNT_ENGINE = count;
     }
 
     public String getName() {
@@ -28,7 +23,8 @@ public final class Airbus extends Aircraft {
     }
 
     public void printCountEngine() {
-        System.out.println("Количество двигателей равно: " + COUNT_ENGINE);
+        int countEngine = name.equals("A380") ? 4 : COUNT_ENGINE;
+        System.out.println("Количество двигателей равно: " + countEngine);
     }
 
     @Override
