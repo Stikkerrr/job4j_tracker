@@ -18,3 +18,6 @@ notifications:
       - stikkerrrr@gmail.com
     on_success: never # default: change
     on_failure: always # default: always
+env:
+  global:
+    - CODECOV_TOKEN="74277555-c2ed-46a0-9e8c-5c69504b200b"
