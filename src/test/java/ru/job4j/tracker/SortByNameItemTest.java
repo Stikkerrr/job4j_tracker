@@ -35,7 +35,7 @@ public class SortByNameItemTest {
         Item item3 = new Item(3, "Job");
         List<Item> items = Arrays.asList(item1, item2, item3);
         List<Item> expect = Arrays.asList(item2, item1, item3);
-        items.sort(new SortByNameItem().reversed());
+        items.sort(new ReverseSortByNameItem());
         assertEquals(items, expect);
     }
 }
