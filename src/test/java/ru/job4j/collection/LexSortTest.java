@@ -21,20 +21,4 @@ public class LexSortTest {
         Arrays.sort(input, new LexSort());
         assertThat(input, is(out));
     }
-
-    @Test
-    public void sortNum12and125and10() {
-        String[] input = {
-                "10. Task.",
-                "1.2 Task.",
-                "1.2.5 Task."
-        };
-        String[] out = {
-                "1.2 Task.",
-                "1.2.5 Task.",
-                "10. Task."
-        };
-        Arrays.sort(input, new LexSort());
-        assertThat(input, is(out));
-    }
 }
