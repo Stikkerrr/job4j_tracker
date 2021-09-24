@@ -13,12 +13,12 @@ public class NotifyAccountTest {
 
     @Test
     public void sent() {
-        List<Account> accounts = Arrays.asList(
+        List<Account> accounts = List.of(
                 new Account("123", "Petr Arsentev", "eDer3432f"),
                 new Account("142", "Petr Arsentev", "000001")
         );
         HashSet<Account> expect = new HashSet<>(
-                Arrays.asList(
+                List.of(
                         new Account("123", "Petr Arsentev", "eDer3432f"),
                         new Account("142", "Petr Arsentev", "000001")
                 )
@@ -28,13 +28,13 @@ public class NotifyAccountTest {
 
     @Test
     public void whenDuplicateRemove() {
-        List<Account> accounts = Arrays.asList(
+        List<Account> accounts = List.of(
                 new Account("1234", "Ivan Ivanovich Ivanov", "000001"),
                 new Account("4321", "Petr Petrovich Petrov", "000010"),
                 new Account("1234", "Ivan Ivanovich Ivanov", "000001")
         );
         HashSet<Account> expect = new HashSet<>(
-                Arrays.asList(
+                List.of(
                         new Account("1234", "Ivan Ivanovich Ivanov", "000001"),
                         new Account("4321", "Petr Petrovich Petrov", "000010")
                 )
