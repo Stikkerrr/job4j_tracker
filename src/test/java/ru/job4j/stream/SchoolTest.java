@@ -40,7 +40,7 @@ public class SchoolTest {
         School sc = new School();
         Predicate<Student> pr = student -> {
             int scoreStudent = student.getScore();
-            return scoreStudent >= 50 && scoreStudent <= 70;
+            return scoreStudent >= 50 && scoreStudent < 70;
         };
         List<Student> rsl = sc.collect(students, pr);
         List<Student> expected = new ArrayList<>();
