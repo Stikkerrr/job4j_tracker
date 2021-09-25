@@ -2,6 +2,8 @@ package ru.job4j.bank;
 
 import org.junit.Test;
 
+import java.util.Optional;
+
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -12,7 +14,8 @@ public class BankServiceTest {
         var user = new User("3434", "Petr Arsentev");
         var bank = new BankService();
         bank.addUser(user);
-        assertThat(bank.findByPassport("3434"), is(user));
+        var foundUser = bank.findByPassport("3434");
+        foundUser.ifPresent(value -> assertThat(value, is(user)));
     }
 
     @Test
@@ -21,7 +24,7 @@ public class BankServiceTest {
         var bank = new BankService();
         bank.addUser(user);
         bank.addAccount(user.getPassport(), new Account("5546", 150D));
-        assertNull(bank.findByRequisite("34", "5546"));
+        assertThat(bank.findByRequisite("34", "5546"), is(Optional.empty()));
     }
 
     @Test
